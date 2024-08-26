@@ -33,7 +33,7 @@
 				<key>IOPropertyMatch</key>
 				<dict>
 					<key>pcidebug</key>
-					<string>13:0:0</string>
+					<string>118:0:0</string>
 				</dict>
 			</dict>
 			<key>IOProviderClass</key>
@@ -161,7 +161,7 @@
 				<key>IOPropertyMatch</key>
 				<dict>
 					<key>pcidebug</key>
-					<string>16:0:3</string>
+					<string>121:0:3</string>
 				</dict>
 			</dict>
 			<key>IOProviderClass</key>
@@ -212,7 +212,7 @@
 				<key>IOPropertyMatch</key>
 				<dict>
 					<key>pcidebug</key>
-					<string>16:0:4</string>
+					<string>121:0:4</string>
 				</dict>
 			</dict>
 			<key>IOProviderClass</key>
@@ -281,7 +281,7 @@
 				<key>IOPropertyMatch</key>
 				<dict>
 					<key>pcidebug</key>
-					<string>17:0:0</string>
+					<string>122:0:0</string>
 				</dict>
 			</dict>
 			<key>IOProviderClass</key>

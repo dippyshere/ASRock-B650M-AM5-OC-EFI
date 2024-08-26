@@ -25,12 +25,12 @@ ___
 | dGPU              | NVIDIA GeForce RTX 3060 12GB (Windows) |
 | dGPU              | AMD Radeon Pro WX 7100 8GB (macOS)     |
 | Motherboard       | ASRock B650M PG Riptide AM5            |
-| RAM               | 32GB DDR5 4800MHz                      |
+| RAM               | 64GB DDR5 3600MHz                      |
 | Storage           | Silicon Power Slim S55 512 GB (macOS)  |
 | Audio             | Realtek ALC897                         |
 | Ethernet          | Realtek RTL8125                        |
 | Wi-Fi + Bluetooth | Intel Wireless-AC 9260                 |
-| BIOS Version      | 3.01.AS01 [Beta]                       |
+| BIOS Version      | 3.06                                   |
 
 ## 📝 Notes
 
