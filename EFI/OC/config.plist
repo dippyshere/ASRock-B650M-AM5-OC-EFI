@@ -8,11 +8,35 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>FixShutdown-USB-SSDT.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>FixShutdown-USB-SSDT.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-GPU-DISABLE.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-GPU-DISABLE.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>HPET _CRS (Needs _CRS to XCRS Rename)</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-HPET.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Faked Embedded Controller</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-EC.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -32,19 +56,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-EC</string>
+				<string>SSDT to disable USB RHUB/HUBN/URTH and rename devices</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-EC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>FixShutdown-USB-SSDT.aml</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>FixShutdown-USB-SSDT.aml</string>
+				<string>SSDT-USB-Reset.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
@@ -86,43 +102,13 @@
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
-				<string>Replace one byte sequence with another</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>ESIzRA==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>RDMiEQ==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string>\_SB.PCI0.LPCB.HPET</string>
-				<key>BaseSkip</key>
-				<integer>0</integer>
-				<key>Comment</key>
-				<string>HPET _CRS to XCRS</string>
+				<string>_PTS to ZPTS</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
-				<data>X0NSUw==</data>
+				<data>X1BUUw==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
@@ -130,7 +116,7 @@
 				<key>OemTableId</key>
 				<data></data>
 				<key>Replace</key>
-				<data>WENSUw==</data>
+				<data>WlBUUw==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -158,7 +144,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>OemTableId</key>
-				<data>AAAAAA==</data>
+				<data>AAAAAAAAAAA=</data>
 				<key>Replace</key>
 				<data>JVhTVEE=</data>
 				<key>ReplaceMask</key>
@@ -188,7 +174,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>OemTableId</key>
-				<data>AAAAAA==</data>
+				<data>AAAAAAAAAAA=</data>
 				<key>Replace</key>
 				<data>KFhDUlM=</data>
 				<key>ReplaceMask</key>
@@ -218,7 +204,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>OemTableId</key>
-				<data>AAAAAA==</data>
+				<data>AAAAAAAAAAA=</data>
 				<key>Replace</key>
 				<data>IgAAeQA=</data>
 				<key>ReplaceMask</key>
@@ -248,7 +234,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>OemTableId</key>
-				<data>AAAAAA==</data>
+				<data>AAAAAAAAAAA=</data>
 				<key>Replace</key>
 				<data>IgAAeQA=</data>
 				<key>ReplaceMask</key>
@@ -278,7 +264,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>OemTableId</key>
-				<data>AAAAAA==</data>
+				<data>AAAAAAAAAAA=</data>
 				<key>Replace</key>
 				<data>IgAAeQA=</data>
 				<key>ReplaceMask</key>
@@ -291,22 +277,26 @@
 				<data>AAAAAA==</data>
 			</dict>
 			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
 				<key>Comment</key>
-				<string>_PTS to ZPTS</string>
+				<string>XHC1 _STA to XSTA Rename</string>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>X1BUUw==</data>
+				<data>MQAAABQSX1NUQQ==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
 				<data></data>
 				<key>OemTableId</key>
-				<data></data>
+				<data>AAAAAAAAAAA=</data>
 				<key>Replace</key>
-				<data>WlBUUw==</data>
+				<data>MQAAABQSWFNUQQ==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -314,7 +304,67 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
+				<data>AAAAAA==</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>XHC2 _STA to XSTA Rename</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>MgAAABQSX1NUQQ==</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
 				<data></data>
+				<key>OemTableId</key>
+				<data>AAAAAAAAAAA=</data>
+				<key>Replace</key>
+				<data>MgAAABQSWFNUQQ==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>AAAAAA==</data>
+			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>XH00 _STA to XSTA Rename</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>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oA9bElNEU1cAU0RTV2hpaqBIBZKTREFEUgzu7u7uTTQ2MA0gIE9FTS1BU0wtUENJZSBBZGRyZXNzICgweCVYKS5fRFNXICglZCAlZCAlZCkgIFBDU0EgPSAlZAoAREFEUmhpalBDU0EAFEYEX1BTMAhNNDYwDSAgT0VNLUFTTC1QQ0llIEFkZHJlc3MgKDB4JVgpLl9QUzAKAERBRFIAAAAAAKAMWxJQUFMwAFBQUzAURgRfUFMzCE00NjANICBPRU0tQVNMLVBDSWUgQWRkcmVzcyAoMHglWCkuX1BTMwoAREFEUgAAAAAAoAxbElBQUzMAUFBTM1uEQyVQV1JTAAAAFEgGX1NUQQigTgSSk0RBRFIM7u7u7k00NjANICBPRU0tQVNMLVBDSWUgQWRkcmVzcyAoMHglWCkuUFdSUy5fU1RBID0gMHglWAoAREFEUlBXM1MAAAAAoAxbElBTVEEAUFNUQaRQVzNTFE8OX09OXwigRw6TUFczUwBwAVBXM1NNNDYwDSAgT0VNLUFTTC1QQ0llIEFkZHJlc3MgKDB4JVgpLlBXUlMuX09OID0gMHglWAoAREFEUlBXM1MAAAAAoEsIWxJYSEdQAKBBCJCTRVNUQQCSlFhIR1AKA000NjANICBPRU0tQVNMLUNhbGwgQ3BtQ2hlY2tFeHBhbmRlcklucHV0RXZlbnQgKCVkKSBpbiBQQ0llIEFkZHJlc3MgKDB4JVgpLl9TVEEgKEQzLT5EMCkKAFhIR1BEQURSAAAAAHBNNEYxWEhHUGCgDFsSUF9PTgBQX09OFEAPX09GRgigSA6TUFczUwFwAFBXM1NNNDYwDSAgT0VNLUFTTC1QQ0llIEFkZHJlc3MgKDB4JVgpLlBXUlMuX09GRiA9IDB4JVgKAERBRFJQVzNTAAAAAKBLCFsSWEhHUACgQQiQk0VTVEEAkpRYSEdQCgNNNDYwDSAgT0VNLUFTTC1DYWxsIENwbUNoZWNrRXhwYW5kZXJJbnB1dEV2ZW50ICglZCkgaW4gUENJZSBBZGRyZXNzICgweCVYKS5fU1RBIChEMC0+RDMpCgBYSEdQREFEUgAAAABwTTRGMVhIR1BgoAxbElBfT0YAUF9PRghfUFIwEgYBUFdSUwhfUFIzEgYBUFdSU1uChg==</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data>AAAAAAAAAAA=</data>
+				<key>Replace</key>
+				<data>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oA9bElNEU1cAU0RTV2hpaqBIBZKTREFEUgzu7u7uTTQ2MA0gIE9FTS1BU0wtUENJZSBBZGRyZXNzICgweCVYKS5fRFNXICglZCAlZCAlZCkgIFBDU0EgPSAlZAoAREFEUmhpalBDU0EAFEYEX1BTMAhNNDYwDSAgT0VNLUFTTC1QQ0llIEFkZHJlc3MgKDB4JVgpLl9QUzAKAERBRFIAAAAAAKAMWxJQUFMwAFBQUzAURgRfUFMzCE00NjANICBPRU0tQVNMLVBDSWUgQWRkcmVzcyAoMHglWCkuX1BTMwoAREFEUgAAAAAAoAxbElBQUzMAUFBTM1uEQyVQV1JTAAAAFEgGX1NUQQigTgSSk0RBRFIM7u7u7k00NjANICBPRU0tQVNMLVBDSWUgQWRkcmVzcyAoMHglWCkuUFdSUy5fU1RBID0gMHglWAoAREFEUlBXM1MAAAAAoAxbElBTVEEAUFNUQaRQVzNTFE8OX09OXwigRw6TUFczUwBwAVBXM1NNNDYwDSAgT0VNLUFTTC1QQ0llIEFkZHJlc3MgKDB4JVgpLlBXUlMuX09OID0gMHglWAoAREFEUlBXM1MAAAAAoEsIWxJYSEdQAKBBCJCTRVNUQQCSlFhIR1AKA000NjANICBPRU0tQVNMLUNhbGwgQ3BtQ2hlY2tFeHBhbmRlcklucHV0RXZlbnQgKCVkKSBpbiBQQ0llIEFkZHJlc3MgKDB4JVgpLl9TVEEgKEQzLT5EMCkKAFhIR1BEQURSAAAAAHBNNEYxWEhHUGCgDFsSUF9PTgBQX09OFEAPX09GRgigSA6TUFczUwFwAFBXM1NNNDYwDSAgT0VNLUFTTC1QQ0llIEFkZHJlc3MgKDB4JVgpLlBXUlMuX09GRiA9IDB4JVgKAERBRFJQVzNTAAAAAKBLCFsSWEhHUACgQQiQk0VTVEEAkpRYSEdQCgNNNDYwDSAgT0VNLUFTTC1DYWxsIENwbUNoZWNrRXhwYW5kZXJJbnB1dEV2ZW50ICglZCkgaW4gUENJZSBBZGRyZXNzICgweCVYKS5fU1RBIChEMC0+RDMpCgBYSEdQREFEUgAAAABwTTRGMVhIR1BgoAxbElBfT0YAUF9PRghfUFIwEgYBUFdSUwhfUFIzEgYBUFdSU1uChg==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>AAAAAA==</data>
 			</dict>
 		</array>
 		<key>Quirks</key>
@@ -341,7 +391,7 @@
 				<key>Address</key>
 				<integer>3758096384</integer>
 				<key>Comment</key>
-				<string>MMIO devirt 0xE0000000 (0x10000 pages)</string>
+				<string>MMIO devirt 0xE0000000 (0x10000 pages - 256 MB)</string>
 				<key>Enabled</key>
 				<false/>
 			</dict>
@@ -349,7 +399,7 @@
 				<key>Address</key>
 				<integer>4143972352</integer>
 				<key>Comment</key>
-				<string>MMIO devirt 0xF7000000 (0x7E00 pages)</string>
+				<string>MMIO devirt 0xF7000000 (0x7E00 pages - 126 MB)</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -357,7 +407,7 @@
 				<key>Address</key>
 				<integer>4276092928</integer>
 				<key>Comment</key>
-				<string>MMIO devirt 0xFEE00000 (0x1 page)</string>
+				<string>MMIO devirt 0xFEE00000 (0x1 page - 4 KB)</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -365,7 +415,7 @@
 				<key>Address</key>
 				<integer>4276097024</integer>
 				<key>Comment</key>
-				<string>MMIO devirt 0xFEE01000 (0x11FF pages)</string>
+				<string>MMIO devirt 0xFEE01000 (0x11FF pages - 18 MB)</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -373,7 +423,7 @@
 				<key>Address</key>
 				<integer>1099511627776</integer>
 				<key>Comment</key>
-				<string>MMIO devirt 0x10000000000 (0x20200 pages)</string>
+				<string>MMIO devirt 0x10000000000 (0x20200 pages - 514 MB)</string>
 				<key>Enabled</key>
 				<false/>
 			</dict>
@@ -411,6 +461,8 @@
 			<false/>
 			<key>AvoidRuntimeDefrag</key>
 			<true/>
+			<key>ClearTaskSwitchBit</key>
+			<false/>
 			<key>DevirtualiseMmio</key>
 			<true/>
 			<key>DisableSingleUser</key>
@@ -455,6 +507,34 @@
 	<dict>
 		<key>Add</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>#Name</key>
+				<string>NVIDIA RTX 3060</string>
+				<key>disable-gpu</key>
+				<true/>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x1)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>#Name</key>
+				<string>Intel(R) Wi-Fi 6E AX210 160MHz</string>
+				<key>built-in</key>
+				<data>AQ==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x1)/Pci(0x0,0x0)/Pci(0x3,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>#Name</key>
+				<string>Realtek RTL8125BG</string>
+				<key>built-in</key>
+				<data>AQ==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x1)/Pci(0x0,0x0)/Pci(0x8,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>#Name</key>
+				<string>SAMSUNG MZVLB256HAHQ-000H1</string>
+				<key>built-in</key>
+				<data>AQ==</data>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x1)/Pci(0x0,0x0)/Pci(0xD,0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>#Name</key>
@@ -466,20 +546,6 @@
 			<dict>
 				<key>#Name</key>
 				<string>Samsung 970 EVO Plus</string>
-				<key>built-in</key>
-				<data>AQ==</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>#Name</key>
-				<string>NVIDIA RTX 3060</string>
-				<key>disable-gpu</key>
-				<true/>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x2,0x1)/Pci(0x0,0x0)/Pci(0x3,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>#Name</key>
-				<string>Intel Wireless-AC 9260</string>
 				<key>built-in</key>
 				<data>AQ==</data>
 			</dict>
@@ -665,7 +731,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/WhateverGreen</string>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>24.99.99</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -719,7 +785,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IntelBTPatcher</string>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>24.99.99</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -844,6 +910,78 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IntelMKLFixup</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>HoRNDIS.kext</string>
+				<key>Comment</key>
+				<string>HoRNDIS.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/HoRNDIS</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>AMFIPass.kext</string>
+				<key>Comment</key>
+				<string>AMFIPass.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/AMFIPass</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>DebugEnhancer.kext</string>
+				<key>Comment</key>
+				<string>DebugEnhancer.kext</string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/DebugEnhancer</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>iBridged.kext</string>
+				<key>Comment</key>
+				<string>iBridged.kext</string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/iBridged</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1035,7 +1173,7 @@
 				<key>Mask</key>
 				<data>//3/AAA=</data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>22.4.0</string>
 				<key>Replace</key>
@@ -1065,7 +1203,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>17.0.0</string>
 				<key>Replace</key>
@@ -1095,7 +1233,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>17.0.0</string>
 				<key>Replace</key>
@@ -1125,7 +1263,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>17.0.0</string>
 				<key>Replace</key>
@@ -1155,7 +1293,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>17.0.0</string>
 				<key>Replace</key>
@@ -1185,7 +1323,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>17.0.0</string>
 				<key>Replace</key>
@@ -1231,7 +1369,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey | _cpuid_set_generic_info | Disable check to allow leaf7 | 15.x</string>
+				<string>algrey | _cpuid_set_generic_info | Disable check to allow leaf7 | 15.0+</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -1245,7 +1383,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>24.0.0</string>
 				<key>Replace</key>
@@ -1305,7 +1443,7 @@
 				<key>Mask</key>
 				<data>AAAAAAAA/////w==</data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>21.0.0</string>
 				<key>Replace</key>
@@ -1365,7 +1503,7 @@
 				<key>Mask</key>
 				<data>//8AAAAA//8=</data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>20.4.0</string>
 				<key>Replace</key>
@@ -1395,7 +1533,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>17.0.0</string>
 				<key>Replace</key>
@@ -1425,7 +1563,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>17.0.0</string>
 				<key>Replace</key>
@@ -1441,7 +1579,7 @@
 				<key>Base</key>
 				<string>__ZN11IOPCIBridge13probeBusGatedEP14probeBusParams</string>
 				<key>Comment</key>
-				<string>CaseySJ | probeBusGated | Disable 10 bit tags | 12.0+</string>
+				<string>CaseySJ | probeBusGated | Disable 10 bit tags | 12.0-15.x</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -1469,6 +1607,36 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>Base</key>
+				<string>__ZN11IOPCIBridge13probeBusGatedEP14probeBusParams</string>
+				<key>Comment</key>
+				<string>CaseySJ | probeBusGated | Disable 10 bit tags | 26.0+</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>4BFzQA==</data>
+				<key>Identifier</key>
+				<string>com.apple.iokit.IOPCIFamily</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>8P//8A==</data>
+				<key>MaxKernel</key>
+				<string>25.99.99</string>
+				<key>MinKernel</key>
+				<string>25.0.0</string>
+				<key>Replace</key>
+				<data>AAACAA==</data>
+				<key>ReplaceMask</key>
+				<data>AAAPAA==</data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Base</key>
 				<string>__ZN17IOPCIConfigurator18IOPCIIsHotplugPortEP16IOPCIConfigEntry</string>
 				<key>Comment</key>
 				<string>CaseySJ | IOPCIIsHotplugPort | Fix PCI bus enumeration on AM5 | 13.0+</string>
@@ -1485,7 +1653,7 @@
 				<key>Mask</key>
 				<data>/wD//w==</data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>22.0.0</string>
 				<key>Replace</key>
@@ -1515,7 +1683,7 @@
 				<key>Mask</key>
 				<data>/wAAD/////8AAP8AAAD/AAAAAAA=</data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>21.0.0</string>
 				<key>Replace</key>
@@ -1545,7 +1713,7 @@
 				<key>Mask</key>
 				<data>SAAA8P////8AAAAAAA==</data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>21.0.0</string>
 				<key>Replace</key>
@@ -1621,7 +1789,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>Algrey / Zormeister | _mtrr_update_action | Fix PAT | 15+</string>
+				<string>Algrey / Zormeister | _mtrr_update_action | Fix PAT | 15.0+</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -1635,7 +1803,7 @@
 				<key>Mask</key>
 				<data>/////////////wAAAAD//w==</data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>24.0.0</string>
 				<key>Replace</key>
@@ -1651,7 +1819,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>Shaneee / Zormeister | _mtrr_update_action | Fix PAT | 15+</string>
+				<string>Shaneee / Zormeister | _mtrr_update_action | Fix PAT | 15.0+</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -1665,7 +1833,7 @@
 				<key>Mask</key>
 				<data>/////////////wAAAAD//w==</data>
 				<key>MaxKernel</key>
-				<string>24.99.99</string>
+				<string>25.99.99</string>
 				<key>MinKernel</key>
 				<string>24.0.0</string>
 				<key>Replace</key>
@@ -1779,7 +1947,7 @@
 			<key>AppleDebug</key>
 			<false/>
 			<key>ApplePanic</key>
-			<true/>
+			<false/>
 			<key>DisableWatchDog</key>
 			<true/>
 			<key>DisplayDelay</key>
@@ -1791,7 +1959,7 @@
 			<key>SysReport</key>
 			<false/>
 			<key>Target</key>
-			<integer>3</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Entries</key>
 		<array>
@@ -1900,14 +2068,20 @@
 			<dict>
 				<key>#INFO (prev-lang:kbd)</key>
 				<string>en:252 (ABC), set 656e3a323532</string>
+				<key>EnableTRIM</key>
+				<data>AQAAAA==</data>
 				<key>ForceDisplayRotationInEFI</key>
 				<integer>0</integer>
 				<key>SystemAudioVolume</key>
-				<data>QQ==</data>
+				<data>eQ==</data>
+				<key>bluetoothExternalDongleFailed</key>
+				<data>AA==</data>
+				<key>bluetoothInternalControllerInfo</key>
+				<data>AAAAAAAAAAAAAAAAAAA=</data>
 				<key>boot-args</key>
-				<string>debug=0x100 keepsyms=1 alcid=11 swd_panic=1 unfairgva=1 itlwm_cc=AU -lilubetaall</string>
+				<string>debug=0x100 keepsyms=1 alcid=11 unfairgva=1 itlwm_cc=AU -lilubetaall</string>
 				<key>csr-active-config</key>
-				<data>AAAAAA==</data>
+				<data>D/8AAA==</data>
 				<key>prev-lang:kbd</key>
 				<string>en-AU:15</string>
 				<key>run-efi-updater</key>
@@ -1932,6 +2106,10 @@
 				<string>SystemAudioVolume</string>
 				<string>boot-args</string>
 				<string>ForceDisplayRotationInEFI</string>
+				<string>csr-active-config</string>
+				<string>prev-lang:kbd</string>
+				<string>bluetoothExternalDongleFailed</string>
+				<string>bluetoothInternalControllerInfo</string>
 			</array>
 		</dict>
 		<key>LegacyOverwrite</key>
@@ -2068,11 +2246,11 @@
 			<key>DisconnectHda</key>
 			<false/>
 			<key>MaximumGain</key>
-			<integer>-16</integer>
+			<integer>-30</integer>
 			<key>MinimumAssistGain</key>
 			<integer>-30</integer>
 			<key>MinimumAudibleGain</key>
-			<integer>-55</integer>
+			<integer>-128</integer>
 			<key>PlayChime</key>
 			<string>Auto</string>
 			<key>ResetTrafficClass</key>
@@ -2143,6 +2321,42 @@
 				<false/>
 				<key>Path</key>
 				<string>AudioDxe.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>apfs_aligned.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>LoadEarly</key>
+				<false/>
+				<key>Path</key>
+				<string>apfs_aligned.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>OpenLinuxBoot.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>LoadEarly</key>
+				<false/>
+				<key>Path</key>
+				<string>OpenLinuxBoot.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>btrfs_x64.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>LoadEarly</key>
+				<false/>
+				<key>Path</key>
+				<string>btrfs_x64.efi</string>
 			</dict>
 		</array>
 		<key>Input</key>
@@ -2306,6 +2520,8 @@
 				<string>RuntimeCode</string>
 			</dict>
 		</array>
+		<key>Unload</key>
+		<array/>
 	</dict>
 </dict>
 </plist>

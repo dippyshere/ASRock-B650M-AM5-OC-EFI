@@ -29,8 +29,8 @@ ___
 | Storage           | Silicon Power Slim S55 512 GB (macOS)  |
 | Audio             | Realtek ALC897                         |
 | Ethernet          | Realtek RTL8125                        |
-| Wi-Fi + Bluetooth | Intel Wireless-AC 9260                 |
-| BIOS Version      | 3.06                                   |
+| Wi-Fi + Bluetooth | Intel Wi-Fi 6E AX210                   |
+| BIOS Version      | 3.40                                   |
 
 ## 📝 Notes
 
@@ -68,21 +68,23 @@ ___
 
 | Component                                                                                                             | Version |
 | --------------------------------------------------------------------------------------------------------------------- | ------- |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/)                                                               | 1.0.3   |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/)                                                               | 1.0.6   |
 | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/)                                                           | 2.3.0   |
-| [AppleALC](https://github.com/acidanthera/AppleALC)                                                                   | 1.9.3   |
+| [AMFIPass](https://github.com/dortania/OpenCore-Legacy-Patcher/tree/main/payloads/Kexts/Acidanthera/)                 | 1.4.1   |
+| [AppleALC](https://github.com/acidanthera/AppleALC)                                                                   | 1.9.5   |
 | [AppleMCEReporterDisabler](https://github.com/acidanthera/bugtracker/files/3703498/AppleMCEReporterDisabler.kext.zip) | 1.0.0   |
-| [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)                                                          | 2.6.9   |
-| [FeatureUnlock](https://github.com/acidanthera/FeatureUnlock/)                                                        | 1.1.7   |
+| [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)                                                          | 2.7.1   |
+| [FeatureUnlock](https://github.com/acidanthera/FeatureUnlock/)                                                        | 1.1.8   |
+| [HoRNDIS](https://github.com/TomHeaven/HoRNDIS/)                                                                      | 9.3.0   |
 | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/)                                | 2.4.0   |
-| [Lilu](https://github.com/acidanthera/Lilu)                                                                           | 1.7.0   |
-| [LucyRTL8125Ethernet](https://github.com/Mieze/LucyRTL8125Ethernet)                                                   | 1.2.0d5 |
-| [NVMeFix](https://github.com/acidanthera/NVMeFix)                                                                     | 1.1.2   |
-| [RestrictEvents](https://github.com/acidanthera/RestrictEvents)                                                       | 1.1.5   |
+| [Lilu](https://github.com/acidanthera/Lilu)                                                                           | 1.7.1   |
+| [LucyRTL8125Ethernet](https://github.com/Mieze/LucyRTL8125Ethernet)                                                   | 1.2.2   |
+| [NVMeFix](https://github.com/acidanthera/NVMeFix)                                                                     | 1.1.3   |
+| [RestrictEvents](https://github.com/acidanthera/RestrictEvents)                                                       | 1.1.6   |
 | [SMCProcessorAMD](https://github.com/Lorys89/SMCProcessorAMD)                                                         | 1.0.1   |
 | [SMCRadeonSensors](https://github.com/ChefKissInc/SMCRadeonSensors)                                                   | 2.3.1   |
-| [VirtualSMC](https://github.com/acidanthera/VirtualSMC)                                                               | 1.3.4   |
-| [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                         | 1.6.9   |
+| [VirtualSMC](https://github.com/acidanthera/VirtualSMC)                                                               | 1.3.7   |
+| [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                         | 1.7.0   |
 
 ## 📚 References
 

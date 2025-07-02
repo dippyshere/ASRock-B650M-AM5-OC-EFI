@@ -33,7 +33,7 @@
 				<key>IOPropertyMatch</key>
 				<dict>
 					<key>pcidebug</key>
-					<string>13:0:0</string>
+					<string>12:0:0</string>
 				</dict>
 			</dict>
 			<key>IOProviderClass</key>
@@ -56,6 +56,12 @@
 						<data>
 						CAAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						CAAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>3</integer>
 					</dict>
 					<key>HS02</key>
 					<dict>
@@ -67,6 +73,12 @@
 						<data>
 						CgAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						CgAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>3</integer>
 					</dict>
 					<key>HS03</key>
 					<dict>
@@ -78,6 +90,12 @@
 						<data>
 						DQAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						DQAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>255</integer>
 					</dict>
 					<key>HS04</key>
 					<dict>
@@ -89,6 +107,12 @@
 						<data>
 						DwAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						DwAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>0</integer>
 					</dict>
 					<key>HS05</key>
 					<dict>
@@ -100,6 +124,12 @@
 						<data>
 						EAAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						EAAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>0</integer>
 					</dict>
 					<key>HS06</key>
 					<dict>
@@ -111,6 +141,12 @@
 						<data>
 						EQAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						EQAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>0</integer>
 					</dict>
 					<key>HS07</key>
 					<dict>
@@ -122,6 +158,12 @@
 						<data>
 						EgAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						EgAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>0</integer>
 					</dict>
 					<key>SS01</key>
 					<dict>
@@ -133,6 +175,12 @@
 						<data>
 						AwAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						AwAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>3</integer>
 					</dict>
 					<key>SS02</key>
 					<dict>
@@ -144,6 +192,12 @@
 						<data>
 						BQAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						BQAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>3</integer>
 					</dict>
 				</dict>
 			</dict>
@@ -161,7 +215,7 @@
 				<key>IOPropertyMatch</key>
 				<dict>
 					<key>pcidebug</key>
-					<string>16:0:3</string>
+					<string>15:0:3</string>
 				</dict>
 			</dict>
 			<key>IOProviderClass</key>
@@ -184,6 +238,12 @@
 						<data>
 						AgAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						AgAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>9</integer>
 					</dict>
 					<key>SS01</key>
 					<dict>
@@ -195,6 +255,12 @@
 						<data>
 						BAAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						BAAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>9</integer>
 					</dict>
 				</dict>
 			</dict>
@@ -212,7 +278,7 @@
 				<key>IOPropertyMatch</key>
 				<dict>
 					<key>pcidebug</key>
-					<string>16:0:4</string>
+					<string>15:0:4</string>
 				</dict>
 			</dict>
 			<key>IOProviderClass</key>
@@ -235,6 +301,12 @@
 						<data>
 						AQAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						AQAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>3</integer>
 					</dict>
 					<key>HS02</key>
 					<dict>
@@ -244,6 +316,12 @@
 						<data>
 						AgAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						AgAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>3</integer>
 					</dict>
 					<key>SS01</key>
 					<dict>
@@ -255,6 +333,12 @@
 						<data>
 						AwAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						AwAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>3</integer>
 					</dict>
 					<key>SS02</key>
 					<dict>
@@ -264,6 +348,12 @@
 						<data>
 						BAAAAA==
 						</data>
+						<key>usb-port-number</key>
+						<data>
+						BAAAAA==
+						</data>
+						<key>usb-port-type</key>
+						<integer>3</integer>
 					</dict>
 				</dict>
 			</dict>
@@ -281,7 +371,7 @@
 				<key>IOPropertyMatch</key>
 				<dict>
 					<key>pcidebug</key>
-					<string>17:0:0</string>
+					<string>16:0:0</string>
 				</dict>
 			</dict>
 			<key>IOProviderClass</key>
