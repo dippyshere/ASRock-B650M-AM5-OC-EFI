@@ -61,30 +61,16 @@
 				<key>WiFi_1</key>
 				<dict>
 					<key>password</key>
-					<string>zxyssdt112233</string>
+					<string>f03Wv!ldD</string>
 					<key>ssid</key>
-					<string>ssdt</string>
+					<string>Rapture GT-AC5300</string>
 				</dict>
 				<key>WiFi_2</key>
 				<dict>
 					<key>password</key>
-					<string>zxyssdt112233</string>
+					<string>f03Wv!ldD</string>
 					<key>ssid</key>
-					<string>ssdt_5G</string>
-				</dict>
-				<key>WiFi_3</key>
-				<dict>
-					<key>password</key>
-					<string></string>
-					<key>ssid</key>
-					<string>Redmi</string>
-				</dict>
-				<key>WiFi_4</key>
-				<dict>
-					<key>password</key>
-					<string>9utc5c5f</string>
-					<key>ssid</key>
-					<string>CMCC-KtG6</string>
+					<string>CM-32 AC2600</string>
 				</dict>
 			</dict>
 		</dict>
